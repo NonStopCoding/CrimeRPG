@@ -41,4 +41,3 @@ function showItems($id = 0) {
 		}
 	}
 }
-
