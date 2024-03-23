@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS `attacklogs` (
 	userid int(11) NOT NULL,
 	page TEXT NOT NULL,
 	iplogged varchar(255) NOT NULL,
+	ip2logged varchar(255) NOT NULL,
 	textlogged TEXT NOT NULL,
 	checked ENUM('yes', 'no') NOT NULL DEFAULT 'no'
 ) ENGINE = INNODB;
@@ -29,6 +30,7 @@ CREATE TABLE IF NOT EXISTS `mainlogs` (
 	userid int(11) NOT NULL,
 	page TEXT NOT NULL,
 	iplogged varchar(255) NOT NULL,
+	ip2logged varchar(255) NOT NULL,
 	textlogged TEXT NOT NULL,
 	checked ENUM('yes', 'no') NOT NULL DEFAULT 'no'
 ) ENGINE = INNODB;
@@ -47,6 +49,7 @@ CREATE TABLE IF NOT EXISTS `pointslogs` (
 	userid int(11) NOT NULL,
 	page TEXT NOT NULL,
 	iplogged varchar(255) NOT NULL,
+	ip2logged varchar(255) NOT NULL,
 	textlogged TEXT NOT NULL,
 	checked ENUM('yes', 'no') NOT NULL DEFAULT 'no'
 ) ENGINE = INNODB;
@@ -56,6 +59,7 @@ CREATE TABLE IF NOT EXISTS `transactionslogs` (
 	userid int(11) NOT NULL,
 	page TEXT NOT NULL,
 	iplogged varchar(255) NOT NULL,
+	ip2logged varchar(255) NOT NULL,
 	textlogged TEXT NOT NULL,
 	checked ENUM('yes', 'no') NOT NULL DEFAULT 'no'
 ) ENGINE = INNODB;
@@ -65,6 +69,7 @@ CREATE TABLE IF NOT EXISTS `travellogs` (
 	userid int(11) NOT NULL,
 	page TEXT NOT NULL,
 	iplogged varchar(255) NOT NULL,
+	ip2logged varchar(255) NOT NULL,
 	textlogged TEXT NOT NULL,
 	checked ENUM('yes', 'no') NOT NULL DEFAULT 'no'
 ) ENGINE = INNODB;
@@ -96,6 +101,10 @@ CREATE TABLE IF NOT EXISTS `members` (
 	`usr_levelxp` DECIMAL(11, 3) NOT NULL DEFAULT '0.00',
 	`usr_jail` int(11) NOT NULL DEFAULT 0,
 	`usr_hospital` int(11) NOT NULL DEFAULT 0,
+	`usr_registerip` varchar(255) NOT NULL,
+	`usr_registerip2` varchar(255) NOT NULL,
+	`usr_loginip` varchar(255) NOT NULL,
+	`usr_loginip2` varchar(255) NOT NULL,
 	`usr_verified` enum('yes', 'no') NOT NULL DEFAULT 'no'
 ) ENGINE = INNODB;
 
