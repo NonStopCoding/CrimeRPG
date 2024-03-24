@@ -115,3 +115,11 @@ CREATE TABLE IF NOT EXISTS `members_stats` (
 	speed FLOAT(11) NOT NULL DEFAULT 10,
 	dodge FLOAT(11) NOT NULL DEFAULT 10
 ) ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS `settings` (
+  `settings` int(11) NOT NULL,
+  `conf_name` varchar(255) NOT NULL,
+  `conf_value` varchar(255) NOT NULL
+) ENGINE = INNODB;
+
+INSERT INTO `settings` (settings, conf_name, conf_value) VALUES('1', 'registration', 'closed');
