@@ -20,4 +20,11 @@ if (array_key_exists('submit', $_POST)) {
         error('Sorry this username has been taken.');
     }
 
-}
+} ?>
+<form method="post">
+    <label>Username:</label> <input type='text' name='username' id='passCheck' />
+    <label>Email:</label> <input type='emai' name='email' id='emailCheck' />
+    <label>Password:</label> <input type='password' name='password' id='passCheck' />
+    <label>Password Again:</label> <input type='password' name='passworda' id='passCheck' />
+    <button type='submit' name='submit' onclick='' />
+</form>
